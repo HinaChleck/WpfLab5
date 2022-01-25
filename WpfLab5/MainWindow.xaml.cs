@@ -27,8 +27,16 @@ namespace WpfLab5
         public MainWindow()
         {
             InitializeComponent();
+            this.Top = Properties.Settings.Default.Position.Top;
+            this.Left = Properties.Settings.Default.Position.Left;
+            this.Height = Properties.Settings.Default.Position.Height;
+            this.Width = Properties.Settings.Default.Position.Width;
         }
-
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Properties.Settings.Default.Position = this.RestoreBounds;
+            Properties.Settings.Default.Save();
+        }
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string fontFamily = ((sender as ComboBox).SelectedItem as TextBlock).Text;

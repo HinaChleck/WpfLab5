@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfLab5"
         mc:Ignorable="d"
-        Title="Текстовый редактор" Height="450" MinHeight="300" Width="800" MinWidth="500">
+        Title="Текстовый редактор" Height="450" MinHeight="300" Width="800" MinWidth="500" Closing="Window_Closing">
     <Grid>
 
         <Grid>
